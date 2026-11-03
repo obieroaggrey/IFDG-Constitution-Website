@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Sets the character encoding for the page. -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the page responsive on phones, tablets and computers. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Sets the browser tab title. -->
+    <title>Article Two | IFDG Constitution</title>
+
+    <!-- Links this page to the main website stylesheet. -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Links this page to the constitution-specific stylesheet. -->
+    <link rel="stylesheet" href="../css/constitution-page.css">
+
+    <!-- Defines the appearance of the section cards. -->
+    <style>
+        /* Arranges the section cards in a responsive grid. */
+        .section-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        /* Styles each clickable section card. */
+        .section-card {
+            display: block;
+            padding: 22px;
+            border: 1px solid #cbd5df;
+            border-radius: 10px;
+            text-decoration: none;
+            color: inherit;
+            background-color: #ffffff;
+            transition: 0.2s ease;
+        }
+
+        /* Highlights a card when the reader points at it. */
+        .section-card:hover {
+            border-color: #138366;
+            transform: translateY(-3px);
+        }
+
+        /* Styles the section number. */
+        .section-number {
+            color: #138366;
+            font-weight: bold;
+        }
+
+        /* Styles the section heading. */
+        .section-card h3 {
+            color: #143F56;
+            margin: 12px 0;
+        }
+
+        /* Styles the instruction inside each card. */
+        .open-section {
+            color: #138366;
+            font-weight: bold;
+        }
+
+        /* Adds space below the link to the main constitution page. */
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Displays the website header. -->
+    <header>
+        <h1>INVESTORS FINANCIAL DEVELOPMENT GROUP</h1>
+        <p>Digital Constitution</p>
+    </header>
+
+    <!-- Contains the Article Two selection page. -->
+    <main>
+
+       
+        <!-- Introduces Article Two. -->
+        <h2>ARTICLE TWO</h2>
+        <p>Select a section below to read its provisions.</p>
+
+        <!-- Holds the two clickable section cards. -->
+        <div class="section-grid">
+
+            <!-- Opens Article Two, Section I. -->
+            <a class="section-card" href="article-two-section-one.html">
+                <span class="section-number">SECTION I</span>
+                <h3>Purpose of Establishment</h3>
+                <span class="open-section">Open Section →</span>
+            </a>
+
+            <!-- Opens Article Two, Section II. -->
+            <a class="section-card" href="article-two-section-two.html">
+                <span class="section-number">SECTION II</span>
+                <h3>Specific Objectives of the Group</h3>
+                <span class="open-section">Open Section →</span>
+            </a>
+
+        </div>
+         <nav class="section-navigation">
+            <!-- Provides navigation to the next constitution section. -->
+
+            <a class="next-link" href="article-three-menu.html">
+                Next: Article three →
+            </a>
+            <!-- Opens Article One, Section I. -->
+
+        </nav>
+        <!-- Ends the section navigation. -->
+
+
+    </main>
+
+    <!-- Displays the website footer. -->
+    <footer>
+        <p>INVESTORS FINANCIAL DEVELOPMENT GROUP</p>
+        <p>Digital Constitution</p>
+    </footer>
+<script src="../js/navigation.js"></script>
+</body>
+</html>

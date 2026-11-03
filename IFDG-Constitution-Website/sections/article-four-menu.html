@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Sets the character encoding. -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the page responsive on phones and tablets. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Sets the browser tab title. -->
+    <title>Article Four - IFDG Constitution</title>
+
+    <!-- Loads the main website styles. -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Loads the constitution page styles. -->
+    <link rel="stylesheet" href="../css/constitution-page.css">
+
+    <style>
+        /* Arranges the cards in responsive columns. */
+        .section-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        /* Makes the entire card a clickable link. */
+        .section-card {
+            display: block;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            padding: 22px;
+            background-color: #ffffff;
+            text-decoration: none;
+            transition: background-color 0.2s, border-color 0.2s;
+        }
+
+        /* Changes the card appearance when the visitor points at it. */
+        .section-card:hover {
+            background-color: #f3f8f6;
+            border-color: #138366;
+        }
+
+        /* Styles the section number. */
+        .section-number {
+            color: #138366;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        /* Styles the section title. */
+        .section-card h3 {
+            color: #143F56;
+            margin: 0 0 18px;
+            line-height: 1.6;
+        }
+
+        /* Styles the opening instruction. */
+        .open-section {
+            color: #138366;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+
+        /* Keeps cards in one column on narrow screens. */
+        @media (max-width: 600px) {
+            .section-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Contains the Article Four contents. -->
+    <main>
+
+       
+        <!-- Displays the article heading. -->
+        <h2>ARTICLE FOUR</h2>
+
+        <!-- Explains how to open a section. -->
+        <p>Select a section below to read its provisions.</p>
+
+        <!-- Holds all the clickable section cards. -->
+        <div class="section-grid">
+
+            <!-- Entire card opens Article Four, Section I. -->
+            <a class="section-card" href="article-four-section-one.html">
+                <p class="section-number">SECTION I</p>
+                <h3>Finances of the Group</h3>
+                <p class="open-section">Open Section →</p>
+            </a>
+
+            <!-- Entire card opens Article Four, Section II. -->
+            <a class="section-card" href="article-four-section-two.html">
+                <p class="section-number">SECTION II</p>
+                <h3>Heritable Property and Leases</h3>
+                <p class="open-section">Open Section →</p>
+            </a>
+
+            <!-- Entire card opens Article Four, Section III. -->
+            <a class="section-card" href="article-four-section-three.html">
+                <p class="section-number">SECTION III</p>
+                <h3>Alterations to the Constitution</h3>
+                <p class="open-section">Open Section →</p>
+            </a>
+
+            <!-- Entire card opens Article Four, Section VI. -->
+            <a class="section-card" href="article-four-section-six.html">
+                <p class="section-number">SECTION VI</p>
+                <h3>Dissolution</h3>
+                <p class="open-section">Open Section →</p>
+            </a>
+
+            <!-- Entire card opens Article Four, Section V. -->
+            <a class="section-card" href="article-four-section-five.html">
+                <p class="section-number">SECTION V</p>
+                <h3>Annual Audit</h3>
+                <p class="open-section">Open Section →</p>
+            </a>
+
+        </div>
+
+        <!-- Provides a link to the preceding article. -->
+        <p style="margin-top: 30px;">
+            <a href="article-three-menu.html">← Previous Article: Article Three</a>
+        </p>
+         <nav class="section-navigation">
+            <!-- Provides navigation to the next constitution section. -->
+
+            <a class="next-link" href="disputes.html">
+                Next: Disputes →
+            </a>
+            <!-- Opens Article One, Section I. -->
+
+        </nav>
+        <!-- Ends the section navigation. -->
+
+
+    </main>
+<script src="../js/navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Sets the character encoding for the page. -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the page fit different screen sizes, including phones. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Sets the browser tab title. -->
+    <title>Digital Constitution | IFDG</title>
+
+    <!-- Connects the existing main stylesheet. -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Connects the constitution page stylesheet. -->
+    <link rel="stylesheet" href="css/constitution-page.css">
+
+    <style>
+        /* Controls the overall page appearance. */
+        body {
+            margin: 0;
+            background-color: #f3f6f8;
+            color: #263746;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Creates a compact dark-blue header. */
+        body > header {
+            background-color: #143F56;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 15px;
+        }
+
+        /* Displays the group name in gold. */
+        body > header h1 {
+            color: #F1C75B;
+            font-size: 21px;
+            margin: 0 0 3px;
+        }
+
+        /* Keeps the header description compact. */
+        body > header p {
+            color: #ffffff;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        /* Styles the main contents area. */
+        .contents-container {
+            max-width: 1100px;
+            margin: 22px auto;
+            padding: 25px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        /* Styles the page heading. */
+        .contents-container h2 {
+            color: #143F56;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        /* Styles the introduction below the heading. */
+        .contents-intro {
+            text-align: center;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        /* Arranges the cards in two columns. */
+        .contents-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        /* Makes each card clickable and gives it a clear border. */
+        .contents-card {
+            display: block;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #d7e1e6;
+            border-left: 5px solid #138366;
+            border-radius: 8px;
+            color: #263746;
+            text-decoration: none;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        /* Adds a visual effect when a visitor points at a card. */
+        .contents-card:hover {
+            background-color: #f0f7f4;
+            transform: translateY(-3px);
+        }
+
+        /* Displays the card number in green. */
+        .card-number {
+            display: block;
+            color: #138366;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        /* Styles the card title. */
+        .contents-card h3 {
+            color: #143F56;
+            margin: 0 0 12px;
+            font-size: 19px;
+        }
+
+        /* Styles the instruction to open a card. */
+        .card-open {
+            color: #138366;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* Creates a compact dark-blue footer. */
+        body > footer {
+            background-color: #143F56;
+            color: #ffffff;
+            text-align: center;
+            padding: 7px 15px;
+        }
+
+        /* Displays the footer text in gold. */
+        body > footer p {
+            color: #F1C75B;
+            font-size: 13px;
+            margin: 2px 0;
+        }
+
+        /* Adjusts the page for smaller screens. */
+        @media (max-width: 650px) {
+            .contents-container {
+                margin: 12px;
+                padding: 17px;
+            }
+
+            .contents-grid {
+                grid-template-columns: 1fr;
+            }
+
+            body > header h1 {
+                font-size: 17px;
+            }
+
+            .contents-card {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Displays the group identity and page title. -->
+    <header>
+        <h1>INVESTORS FINANCIAL DEVELOPMENT GROUP</h1>
+        <p>Official Digital Constitution</p>
+    </header>
+
+    <!-- Contains the main constitution navigation cards. -->
+    <main class="contents-container">
+
+        <h2>CONSTITUTION TABLE OF CONTENTS</h2>
+
+        <p class="contents-intro">
+            Welcome to the official digital constitution of the
+            Investors Financial Development Group. Select an article
+            or section below to read its contents.
+        </p>
+
+        <!-- Provides links to all the main constitution pages. -->
+        <div class="contents-grid">
+
+            <!-- Opens the Preamble page. -->
+            <a href="../sections/preamble.html" class="contents-card">
+                <span class="card-number">00</span>
+                <h3>Preamble</h3>
+                <span class="card-open">Open section →</span>
+            </a>
+
+            <!-- Opens the Article One contents page. -->
+            <a href="../sections/article-one.html" class="contents-card">
+                <span class="card-number">01</span>
+                <h3>Article One</h3>
+                <span class="card-open">Open article →</span>
+            </a>
+
+            <!-- Opens the Article Two contents page. -->
+            <a href="../sections/article-two.html" class="contents-card">
+                <span class="card-number">02</span>
+                <h3>Article Two</h3>
+                <span class="card-open">Open article →</span>
+            </a>
+
+            <!-- Opens the Article Three contents page. -->
+            <a href="../sections/article-three-menu.html" class="contents-card">
+                <span class="card-number">03</span>
+                <h3>Article Three</h3>
+                <span class="card-open">Open article →</span>
+            </a>
+
+            <!-- Opens the Article Four contents page. -->
+            <a href="../sections/article-four-menu.html" class="contents-card">
+                <span class="card-number">04</span>
+                <h3>Article Four</h3>
+                <span class="card-open">Open article →</span>
+            </a>
+
+            <!-- Opens the Disputes page. -->
+            <a href="../sections/disputes.html" class="contents-card">
+                <span class="card-number">05</span>
+                <h3>Disputes</h3>
+                <span class="card-open">Open section →</span>
+            </a>
+
+            <!-- Opens the Adoption page. -->
+            <a href="../sections/adoption.html" class="contents-card">
+                <span class="card-number">06</span>
+                <h3>Adoption</h3>
+                <span class="card-open">Open section →</span>
+            </a>
+
+        </div>
+    </main>
+
+    <!-- Displays the website footer. -->
+    <footer>
+        <p>INVESTORS FINANCIAL DEVELOPMENT GROUP</p>
+        <p>Official Digital Constitution</p>
+    </footer>
+<script src="../navigation.js"></script>
+</body>
+</html>

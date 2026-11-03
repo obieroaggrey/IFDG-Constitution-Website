@@ -1,0 +1,455 @@
+
+/* =========================================================
+   IFDG CONSTITUTION PAGE
+   Styles only the constitution page, preserving style.css.
+   ========================================================= */
+
+/* Defines the main colours and spacing used on this page. */
+.constitution-page {
+    --constitution-blue: #174f68;
+    --constitution-teal: #123b46;
+    --constitution-gold: #d6ad55;
+    --constitution-green: #287653;
+    --constitution-paper: #ffffff;
+    --constitution-background: #f3f6f7;
+    --constitution-text: #26343a;
+    --constitution-muted: #65747b;
+    --constitution-border: #dce4e7;
+
+    color: var(--constitution-text);
+    background: var(--constitution-background);
+    padding: 32px 5% 64px;
+    min-height: 70vh;
+}
+
+/* Keeps the page introduction centred and readable. */
+.constitution-page .page-introduction {
+    max-width: 1050px;
+    margin: 0 auto 28px;
+    text-align: center;
+}
+
+/* Styles the small introductory label. */
+.constitution-page .eyebrow {
+    color: var(--constitution-green);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* Styles the main constitution page heading. */
+.constitution-page .page-introduction h1 {
+    color: var(--constitution-teal);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.2;
+    margin: 0 0 14px;
+}
+
+/* Styles the group name beneath the main heading. */
+.constitution-page .page-introduction > p:not(.eyebrow) {
+    line-height: 1.7;
+    margin: 8px auto;
+}
+
+/* Styles the notice explaining the source document. */
+.constitution-page .document-notice {
+    max-width: 780px;
+    color: var(--constitution-muted);
+    font-size: 0.95rem;
+}
+
+/* Creates the search panel. */
+.constitution-page .constitution-tools {
+    max-width: 1050px;
+    margin: 0 auto 26px;
+    padding: 22px;
+    background: var(--constitution-paper);
+    border: 1px solid var(--constitution-border);
+    border-top: 4px solid var(--constitution-gold);
+    border-radius: 10px;
+    box-shadow: 0 5px 18px rgba(18, 59, 70, 0.06);
+}
+
+/* Makes the search label clear and easy to read. */
+.constitution-page .constitution-tools label {
+    display: block;
+    margin-bottom: 9px;
+    color: var(--constitution-teal);
+    font-weight: 700;
+}
+
+/* Styles the search input. */
+.constitution-page .constitution-tools input {
+    display: block;
+    width: 100%;
+    min-height: 46px;
+    padding: 11px 14px;
+    border: 1px solid #b9c9ce;
+    border-radius: 6px;
+    background: #ffffff;
+    color: var(--constitution-text);
+    font: inherit;
+}
+
+/* Highlights the search input when selected. */
+.constitution-page .constitution-tools input:focus {
+    outline: 3px solid rgba(214, 173, 85, 0.35);
+    border-color: var(--constitution-blue);
+}
+
+/* Styles the search instructions and result count. */
+.constitution-page #search-status {
+    color: var(--constitution-muted);
+    font-size: 0.88rem;
+    margin: 10px 0 0;
+}
+
+/* Arranges the contents panel beside the document. */
+.constitution-page .constitution-layout {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(220px, 290px) minmax(0, 1fr);
+    align-items: start;
+    gap: 26px;
+}
+
+/* Styles the table of contents panel. */
+.constitution-page .constitution-sidebar {
+    background: var(--constitution-paper);
+    border: 1px solid var(--constitution-border);
+    border-radius: 10px;
+    padding: 22px;
+    box-shadow: 0 5px 18px rgba(18, 59, 70, 0.06);
+}
+
+/* Styles the table of contents heading. */
+.constitution-page .constitution-sidebar h2 {
+    color: var(--constitution-teal);
+    font-size: 1.2rem;
+    margin: 0 0 16px;
+    padding-bottom: 13px;
+    border-bottom: 2px solid var(--constitution-gold);
+}
+
+/* Removes default list spacing from the contents menu. */
+.constitution-page .constitution-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Separates the individual contents links. */
+.constitution-page .constitution-sidebar li {
+    margin: 0;
+    border-bottom: 1px solid #edf1f2;
+}
+
+/* Styles the clickable contents links. */
+.constitution-page .constitution-sidebar a {
+    display: block;
+    padding: 12px 9px;
+    color: var(--constitution-blue);
+    font-size: 0.93rem;
+    line-height: 1.5;
+    text-decoration: none;
+    border-left: 3px solid transparent;
+    overflow-wrap: anywhere;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Highlights a contents link when hovered or focused. */
+.constitution-page .constitution-sidebar a:hover,
+.constitution-page .constitution-sidebar a:focus-visible {
+    color: var(--constitution-teal);
+    background: #edf5f5;
+    border-left-color: var(--constitution-gold);
+}
+
+/* Styles the main document sheet. */
+.constitution-page .constitution-content {
+    min-width: 0;
+    background: var(--constitution-paper);
+    border: 1px solid var(--constitution-border);
+    border-radius: 10px;
+    padding: clamp(20px, 4vw, 48px);
+    box-shadow: 0 5px 18px rgba(18, 59, 70, 0.06);
+}
+
+/* Separates the different constitution sections. */
+.constitution-page .constitution-section {
+    padding: 0 0 28px;
+    margin: 0 0 30px;
+    border-bottom: 1px solid var(--constitution-border);
+    scroll-margin-top: 24px;
+}
+
+/* Removes the divider from the final section. */
+.constitution-page .constitution-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* Styles the main article headings. */
+.constitution-page .constitution-section > h2 {
+    color: var(--constitution-teal);
+    font-size: clamp(1.35rem, 2.5vw, 1.8rem);
+    line-height: 1.35;
+    margin: 0 0 22px;
+    padding: 0 0 12px;
+    border-bottom: 3px solid var(--constitution-gold);
+}
+
+/* Styles the section headings. */
+.constitution-page .constitution-section h3 {
+    color: var(--constitution-blue);
+    font-size: 1.12rem;
+    line-height: 1.5;
+    margin: 24px 0 10px;
+}
+
+/* Styles smaller headings such as Mission Statement. */
+.constitution-page .constitution-section h4 {
+    color: var(--constitution-green);
+    font-size: 1rem;
+    margin: 20px 0 8px;
+}
+
+/* Makes the constitution paragraphs comfortable to read. */
+.constitution-page .constitution-section p {
+    color: var(--constitution-text);
+    font-size: 1rem;
+    line-height: 1.9;
+    margin: 0 0 16px;
+    overflow-wrap: anywhere;
+}
+
+/* Styles numbered and lettered provisions. */
+.constitution-page .constitution-section ol,
+.constitution-page .constitution-section ul {
+    padding-left: 28px;
+    margin: 12px 0 20px;
+}
+
+/* Adds space between list items. */
+.constitution-page .constitution-section li {
+    line-height: 1.8;
+    padding-left: 5px;
+    margin-bottom: 9px;
+}
+
+/* Ensures search can hide nonmatching sections. */
+.constitution-page .constitution-section[hidden] {
+    display: none !important;
+}
+
+/* Gives readers a visible focus indicator for keyboard navigation. */
+.constitution-page a:focus-visible {
+    outline: 3px solid var(--constitution-gold);
+    outline-offset: 3px;
+}
+
+/* Adapts the layout for tablets and smaller screens. */
+@media (max-width: 850px) {
+    .constitution-page .constitution-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .constitution-page .constitution-sidebar {
+        padding: 18px;
+    }
+
+    .constitution-page .constitution-sidebar ul {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0 12px;
+    }
+}
+
+/* Adapts the page for mobile phones. */
+@media (max-width: 520px) {
+    .constitution-page {
+        padding: 24px 14px 42px;
+    }
+
+    .constitution-page .constitution-tools {
+        padding: 16px;
+    }
+
+    .constitution-page .constitution-sidebar ul {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .constitution-page .constitution-content {
+        padding: 20px 17px;
+    }
+
+    .constitution-page .constitution-section p,
+    .constitution-page .constitution-section li {
+        font-size: 0.96rem;
+        line-height: 1.8;
+    }
+}
+
+/* Respects visitors who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+    .constitution-page *,
+    .constitution-page *::before,
+    .constitution-page *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
+
+/* =========================================
+   SHARED CONSTITUTION PAGE COLOURS
+   These rules apply to the constitution pages.
+   ========================================= */
+
+/* Sets the background and default text colour. */
+body {
+    background-color: #f3f6f8;
+    color: #263746;
+}
+
+/* Creates the compact dark-blue website header. */
+header {
+    background-color: #143F56;
+    color: #ffffff;
+    padding: 12px 20px;
+    text-align: center;
+}
+
+/* Displays the group name in gold. */
+header h1 {
+    color: #F1C75B;
+    font-size: 22px;
+    margin: 0 0 5px;
+}
+
+/* Displays the Digital Constitution subtitle in white. */
+header p {
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Gives the main content a clean white background. */
+main {
+    background-color: #ffffff;
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+/* Makes the main headings dark blue. */
+main h2,
+main h3 {
+    color: #143F56;
+}
+
+/* Colours ordinary links green. */
+main a {
+    color: #138366;
+}
+
+/* Creates a dark-blue footer. */
+footer {
+    background-color: #143F56;
+    color: #ffffff;
+    padding: 12px 20px;
+    text-align: center;
+}
+
+/* Colours the footer text gold. */
+footer p {
+    color: #F1C75B;
+    margin: 5px 0;
+}
+
+/* Adjusts the header and content for smaller screens. */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 18px;
+    }
+
+    main {
+        margin: 12px;
+        padding: 16px;
+    }
+}
+
+
+/* SHARED HORIZONTAL NAVIGATION FOR CONSTITUTION PAGES */
+main nav {
+    display: flex;
+    /* Places navigation items horizontally. */
+
+    justify-content: space-between;
+    /* Spreads the links across the available width. */
+
+    align-items: center;
+    /* Aligns the links vertically. */
+
+    flex-wrap: nowrap;
+    /* Keeps all navigation links on one line. */
+
+    gap: 12px;
+    /* Adds space between navigation links. */
+
+    margin-top: 25px;
+    /* Adds space above the navigation. */
+
+    padding: 12px 0;
+    /* Adds vertical spacing without creating a box. */
+
+    border: none;
+    /* Removes the rectangular border. */
+
+    background: transparent;
+    /* Removes the navigation background. */
+}
+
+main nav p {
+    margin: 0;
+    /* Removes unnecessary paragraph spacing. */
+
+    white-space: nowrap;
+    /* Keeps each navigation link on one line. */
+}
+
+main nav a {
+    color: #138366;
+    /* Uses the group's green colour. */
+
+    text-decoration: none;
+    /* Removes the default underline. */
+
+    font-weight: 600;
+    /* Makes navigation links bold. */
+}
+
+main nav a:hover {
+    color: #143F56;
+    /* Changes the link colour when hovered over. */
+
+    text-decoration: underline;
+    /* Underlines the link when hovered over. */
+}
+
+/* ADJUST NAVIGATION FOR MOBILE PHONES */
+@media (max-width: 600px) {
+    main nav {
+        gap: 5px;
+        /* Reduces the space between links on phones. */
+    }
+
+    main nav a {
+        font-size: 11px;
+        /* Makes the links smaller to fit narrow screens. */
+    }
+}

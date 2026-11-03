@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Sets the character encoding. -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the page responsive on phones and tablets. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Sets the browser tab title. -->
+    <title>Article Three | IFDG Constitution</title>
+
+    <!-- Links the main website stylesheet. -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Links the constitution-specific stylesheet. -->
+    <link rel="stylesheet" href="../css/constitution-page.css">
+
+    <!-- Defines the appearance of the section cards. -->
+    <style>
+        /* Arranges the cards in a responsive grid. */
+        .section-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        /* Styles each clickable section card. */
+        .section-card {
+            display: block;
+            padding: 22px;
+            border: 1px solid #cbd5df;
+            border-radius: 10px;
+            text-decoration: none;
+            color: inherit;
+            background-color: #ffffff;
+            transition: 0.2s ease;
+        }
+
+        /* Highlights a card when the reader points at it. */
+        .section-card:hover {
+            border-color: #138366;
+            transform: translateY(-3px);
+        }
+
+        /* Styles the section number. */
+        .section-number {
+            color: #138366;
+            font-weight: bold;
+        }
+
+        /* Styles each section title. */
+        .section-card h3 {
+            color: #143F56;
+            margin: 12px 0;
+        }
+
+        /* Styles the instruction to open a section. */
+        .open-section {
+            color: #138366;
+            font-weight: bold;
+        }
+
+        /* Styles the link back to the main constitution page. */
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Displays the website header. -->
+    <header>
+        <h1>INVESTORS FINANCIAL DEVELOPMENT GROUP</h1>
+        <p>Digital Constitution</p>
+    </header>
+
+    <!-- Contains the Article Three section selection page. -->
+    <main>
+
+        
+        <!-- Introduces Article Three. -->
+        <h2>ARTICLE THREE</h2>
+        <p>Select a section below to read its provisions.</p>
+
+        <!-- Holds all seven section cards. -->
+        <div class="section-grid">
+
+            <!-- Opens Article Three, Section I. -->
+            <a class="section-card" href="article-three-section-one.html">
+                <span class="section-number">SECTION I</span>
+                <h3>Savings and Credit</h3>
+                <span class="open-section">Open Section →</span>
+            </a>
+
+            <!-- Opens Article Three, Section II. -->
+            <a class="section-card" href="article-three-section-two.html">
+                <span class="section-number">SECTION II</span>
+                <h3>Membership</h3>
+                <span class="open-section">Open Section →</span>
+            </a>
+
+            <!-- Opens Article Three, Section III. -->
+            <a class="section-card" href="article-three-section-three.html">
+                <span class="section-number">SECTION III</span>
+                <h3>Office Bearers and Duties</h3>
+                <span class="open-section">Open Section →</span>
+            </a>
+
+            <!-- Opens Article Three, Section IV. -->
+            <a class="section-card" href="article-three-section-four.html">
+                <span class="section-number">SECTION IV</span>
+                <h3>Qualifications for Leadership Positions</h3>
+                <span class="open-section">Open Section →</span>
+            </a>
+
+            <!-- Opens Article Three, Section V. -->
+            <a class="section-card" href="article-three-section-five.html">
+                <span class="section-number">SECTION V</span>
+                <h3>Meetings of the Group</h3>
+                <span class="open-section">Open Section →</span>
+            </a>
+
+            <!-- Opens Article Three, Section VI. -->
+            <a class="section-card" href="article-three-section-six.html">
+                <span class="section-number">SECTION VI</span>
+                <h3>Procedures at Meetings</h3>
+                <span class="open-section">Open Section →</span>
+            </a>
+
+            <!-- Opens Article Three, Section VII. -->
+            <a class="section-card" href="article-three-section-seven.html">
+                <span class="section-number">SECTION VII</span>
+                <h3>Rules of All Meetings</h3>
+                <span class="open-section">Open Section →</span>
+            </a>
+
+        </div>
+         <nav class="section-navigation">
+            <!-- Provides navigation to the next constitution section. -->
+
+            <a class="next-link" href="article-four-menu.html">
+                Next: Article four →
+            </a>
+            <!-- Opens Article One, Section I. -->
+
+        </nav>
+        <!-- Ends the section navigation. -->
+
+
+    </main>
+
+    <!-- Displays the website footer. -->
+    <footer>
+        <p>INVESTORS FINANCIAL DEVELOPMENT GROUP</p>
+        <p>Digital Constitution</p>
+    </footer>
+<script src="../js/navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,1405 @@
+
+/* ====================================================== */
+/* IFDG DIGITAL CONSTITUTION WEBSITE                       */
+/* This stylesheet controls the appearance of the website. */
+/* ====================================================== */
+
+/* -------------------- 1. GLOBAL SETTINGS -------------------- */
+
+:root {
+    /* Stores the main colours so they can be reused consistently. */
+    --color-teal: #123b46;
+    /* Defines the deep teal used in the header and major sections. */
+    --color-blue: #174f68;
+    /* Defines the blue used for links and secondary elements. */
+    --color-gold: #d6ad55;
+    /* Defines the gold used for accents and important details. */
+    --color-green: #287653;
+    /* Defines the green used for positive highlights. */
+    --color-white: #ffffff;
+    /* Defines pure white for text and backgrounds. */
+    --color-background: #f5f7f8;
+    /* Defines the light grey background of the page. */
+    --color-text: #26363c;
+    /* Defines the main dark text colour for readability. */
+    --color-muted: #66777d;
+    /* Defines a softer colour for secondary text. */
+    --color-border: #e1e8eb;
+    /* Defines subtle borders around cards and form fields. */
+    --shadow-soft: 0 8px 28px rgba(18, 59, 70, 0.08);
+    /* Defines a subtle shadow for cards and panels. */
+}
+
+/* Applies consistent sizing rules to every element. */
+* {
+    box-sizing: border-box;
+    /* Includes padding and borders inside an element's width. */
+}
+
+/* Sets the default appearance of the whole webpage. */
+html {
+    scroll-behavior: smooth;
+    /* Makes movement to page sections smooth when supported. */
+}
+
+/* Styles the visible page body. */
+body {
+    margin: 0;
+    /* Removes the browser's default outer margin. */
+    font-family: Arial, Helvetica, sans-serif;
+    /* Uses clear, widely available fonts for easy reading. */
+    background: var(--color-background);
+    /* Applies the light background colour. */
+    color: var(--color-text);
+    /* Applies the main text colour. */
+    line-height: 1.7;
+    /* Adds comfortable vertical spacing between lines. */
+    -webkit-font-smoothing: antialiased;
+    /* Improves text rendering in supported browsers. */
+}
+
+/* Makes images fit inside their containers if added later. */
+img {
+    max-width: 100%;
+    /* Prevents images from overflowing their containers. */
+    height: auto;
+    /* Preserves the original proportions of images. */
+}
+
+/* Removes the default underline from links. */
+a {
+    color: inherit;
+    /* Allows links to inherit the surrounding text colour. */
+    text-decoration: none;
+    /* Removes the browser's default link underline. */
+}
+
+/* Gives keyboard users a visible focus indicator. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid var(--color-gold);
+    /* Highlights the currently focused interactive element. */
+    outline-offset: 4px;
+    /* Places the focus outline slightly outside the element. */
+}
+
+/* Keeps the main content from becoming excessively wide. */
+main {
+    width: 100%;
+    /* Allows the main content to use the available width. */
+    overflow-wrap: break-word;
+    /* Prevents long text from overflowing narrow screens. */
+}
+
+/* -------------------- 2. WEBSITE HEADER -------------------- */
+
+/* Styles the main header at the top of the website. */
+.site-header {
+    background: var(--color-teal);
+    /* Gives the header its formal deep teal background. */
+    color: var(--color-white);
+    /* Makes the header text white by default. */
+    border-bottom: 3px solid var(--color-gold);
+    /* Adds a gold line beneath the header. */
+    position: relative;
+    /* Establishes a positioning context for header content. */
+    z-index: 10;
+    /* Keeps the header above ordinary page content. */
+}
+
+/* Aligns the group identity and navigation. */
+.header-inner {
+    width: min(1180px, calc(100% - 48px));
+    /* Limits the header width while preserving side margins. */
+    min-height: 94px;
+    /* Gives the header a comfortable minimum height. */
+    margin: 0 auto;
+    /* Centres the header content horizontally. */
+    display: flex;
+    /* Places the identity and navigation in a flexible row. */
+    align-items: center;
+    /* Vertically centres the header content. */
+    justify-content: space-between;
+    /* Pushes the identity and navigation apart. */
+    gap: 28px;
+    /* Creates space between the identity and navigation. */
+}
+
+/* Styles the clickable group identity. */
+.brand {
+    display: flex;
+    /* Places the text emblem beside the group name. */
+    align-items: center;
+    /* Vertically aligns the emblem and group name. */
+    gap: 13px;
+    /* Adds space between the emblem and the text. */
+    flex-shrink: 0;
+    /* Prevents the identity from shrinking unnecessarily. */
+}
+
+/* Styles the simple text emblem in place of a logo. */
+.brand-mark {
+    width: 54px;
+    /* Sets the emblem width. */
+    height: 54px;
+    /* Sets the emblem height. */
+    display: flex;
+    /* Enables alignment of the emblem text. */
+    align-items: center;
+    /* Centres the emblem text vertically. */
+    justify-content: center;
+    /* Centres the emblem text horizontally. */
+    border: 2px solid var(--color-gold);
+    /* Adds a gold border around the emblem. */
+    border-radius: 12px;
+    /* Softens the corners of the emblem. */
+    color: var(--color-gold);
+    /* Colours the emblem text gold. */
+    font-size: 15px;
+    /* Sets the emblem text size. */
+    font-weight: 800;
+    /* Makes the emblem text bold. */
+    letter-spacing: 0.5px;
+    /* Adds slight spacing between emblem letters. */
+}
+
+/* Groups the two lines of the group name. */
+.brand-text {
+    display: flex;
+    /* Places the group name lines in a vertical column. */
+    flex-direction: column;
+    /* Stacks the group name lines vertically. */
+    line-height: 1.35;
+    /* Controls the spacing between the two lines. */
+}
+
+/* Styles the first line of the group name. */
+.brand-name {
+    color: var(--color-gold);
+    /* Highlights the first line in gold. */
+    font-size: 14px;
+    /* Sets the first line's text size. */
+    font-weight: 800;
+    /* Makes the first line bold. */
+    letter-spacing: 0.8px;
+    /* Adds formal-looking letter spacing. */
+}
+
+/* Styles the second line of the group name. */
+.brand-subtitle {
+    color: var(--color-white);
+    /* Makes the second line white. */
+    font-size: 12px;
+    /* Sets the second line's text size. */
+    font-weight: 600;
+    /* Gives the second line moderate emphasis. */
+    letter-spacing: 1.4px;
+    /* Adds spacing between the letters. */
+}
+
+/* Arranges the links in the main navigation. */
+.main-nav {
+    display: flex;
+    /* Places navigation links in a row. */
+    align-items: center;
+    /* Vertically centres the navigation links. */
+    justify-content: flex-end;
+    /* Aligns navigation links towards the right. */
+    flex-wrap: wrap;
+    /* Allows links to wrap if space becomes limited. */
+    gap: 8px;
+    /* Adds space between navigation links. */
+}
+
+/* Styles each navigation link. */
+.nav-link {
+    display: inline-block;
+    /* Allows padding around each navigation link. */
+    padding: 10px 14px;
+    /* Creates a comfortable clickable area. */
+    border-radius: 6px;
+    /* Softens the corners of the link background. */
+    color: var(--color-white);
+    /* Makes navigation text white. */
+    font-size: 13px;
+    /* Sets a compact navigation text size. */
+    font-weight: 600;
+    /* Makes navigation text moderately bold. */
+    transition: background 0.2s ease, color 0.2s ease;
+    /* Smooths colour changes when links are interacted with. */
+}
+
+/* Highlights a navigation link when the pointer hovers over it. */
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    /* Adds a subtle translucent background. */
+    color: var(--color-gold);
+    /* Changes the link text to gold. */
+}
+
+/* Identifies the navigation link for the current page. */
+.nav-link.active {
+    color: var(--color-gold);
+    /* Colours the current page link gold. */
+    background: rgba(214, 173, 85, 0.12);
+    /* Adds a subtle gold background to the current link. */
+}
+
+/* -------------------- 3. HOMEPAGE WELCOME SECTION -------------------- */
+
+/* Arranges the welcome text and feature panel. */
+.hero {
+    width: min(1180px, calc(100% - 48px));
+    /* Limits the hero section width and maintains side margins. */
+    margin: 52px auto 64px;
+    /* Centres the section and adds vertical spacing. */
+    display: grid;
+    /* Creates a grid for the text and feature panel. */
+    grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.85fr);
+    /* Gives the welcome text more space than the feature panel. */
+    align-items: center;
+    /* Vertically aligns both columns. */
+    gap: 60px;
+    /* Adds space between the two columns. */
+}
+
+/* Styles the small introductory labels. */
+.eyebrow {
+    margin: 0 0 12px;
+    /* Removes the top margin and adds space below the label. */
+    color: var(--color-green);
+    /* Uses green for the introductory label. */
+    font-size: 12px;
+    /* Keeps the label compact. */
+    font-weight: 800;
+    /* Makes the label bold. */
+    letter-spacing: 2px;
+    /* Adds spacing for a formal appearance. */
+    text-transform: uppercase;
+    /* Displays the label in uppercase letters. */
+}
+
+/* Styles the main homepage heading. */
+.hero h1 {
+    max-width: 680px;
+    /* Prevents the heading from becoming excessively wide. */
+    margin: 0 0 20px;
+    /* Removes the top margin and adds space below. */
+    color: var(--color-teal);
+    /* Gives the heading the main brand colour. */
+    font-size: clamp(34px, 4vw, 53px);
+    /* Scales the heading size with the available screen width. */
+    line-height: 1.16;
+    /* Keeps the heading lines close enough to read as one unit. */
+    letter-spacing: -1.5px;
+    /* Slightly tightens the heading letter spacing. */
+    font-weight: 800;
+    /* Makes the main heading strongly prominent. */
+}
+
+/* Styles the welcome description. */
+.hero-description {
+    max-width: 620px;
+    /* Keeps paragraphs at a comfortable reading width. */
+    margin: 0;
+    /* Removes unnecessary default paragraph margins. */
+    color: var(--color-muted);
+    /* Uses a softer colour for supporting text. */
+    font-size: 16px;
+    /* Sets a comfortable body text size. */
+    line-height: 1.9;
+    /* Gives the description generous line spacing. */
+}
+
+/* Arranges the two welcome buttons. */
+.hero-actions {
+    display: flex;
+    /* Places the buttons next to each other when space permits. */
+    align-items: center;
+    /* Vertically aligns the buttons. */
+    flex-wrap: wrap;
+    /* Allows the buttons to wrap on smaller screens. */
+    gap: 12px;
+    /* Adds space between the buttons. */
+    margin-top: 30px;
+    /* Separates the buttons from the description. */
+}
+
+/* -------------------- 4. BUTTONS -------------------- */
+
+/* Defines shared button styling for links and buttons. */
+.button {
+    display: inline-flex;
+    /* Allows button content to be aligned consistently. */
+    align-items: center;
+    /* Vertically centres the button content. */
+    justify-content: center;
+    /* Horizontally centres the button content. */
+    min-height: 48px;
+    /* Gives buttons a comfortable minimum height. */
+    padding: 12px 20px;
+    /* Adds space inside each button. */
+    border: 1px solid transparent;
+    /* Reserves space for borders without changing dimensions. */
+    border-radius: 7px;
+    /* Softens the button corners. */
+    font-family: inherit;
+    /* Uses the website's main font. */
+    font-size: 14px;
+    /* Sets a readable button text size. */
+    font-weight: 700;
+    /* Makes button text bold. */
+    line-height: 1.4;
+    /* Keeps button text neatly spaced. */
+    text-align: center;
+    /* Centres the button text. */
+    cursor: pointer;
+    /* Shows a pointer when hovering over clickable buttons. */
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+    /* Smooths the button's visual interactions. */
+}
+
+/* Adds a small movement effect to buttons when hovered. */
+.button:hover {
+    transform: translateY(-2px);
+    /* Raises the button slightly when the pointer hovers over it. */
+}
+
+/* Styles the main action button. */
+.button-primary {
+    background: var(--color-teal);
+    /* Gives the primary button a teal background. */
+    color: var(--color-white);
+    /* Makes the primary button text white. */
+    box-shadow: 0 5px 14px rgba(18, 59, 70, 0.14);
+    /* Adds a subtle shadow to emphasise the button. */
+}
+
+/* Changes the main button on hover. */
+.button-primary:hover {
+    background: var(--color-blue);
+    /* Uses blue when the primary button is hovered over. */
+}
+
+/* Styles the secondary action button. */
+.button-secondary {
+    background: var(--color-white);
+    /* Gives the secondary button a white background. */
+    color: var(--color-teal);
+    /* Uses teal text for contrast. */
+    border-color: var(--color-border);
+    /* Adds a subtle border. */
+}
+
+/* Changes the secondary button on hover. */
+.button-secondary:hover {
+    border-color: var(--color-gold);
+    /* Highlights the secondary button with gold. */
+}
+
+/* Styles the search submission button. */
+.button-search {
+    background: var(--color-green);
+    /* Gives the search button a green background. */
+    color: var(--color-white);
+    /* Makes the search button text white. */
+}
+
+/* Darkens the search button when hovered over. */
+.button-search:hover {
+    background: #1e6042;
+    /* Uses a deeper green on hover. */
+}
+
+/* Styles the light button used on the final callout. */
+.button-light {
+    background: var(--color-white);
+    /* Gives the callout button a white background. */
+    color: var(--color-teal);
+    /* Makes the button text teal. */
+    flex-shrink: 0;
+    /* Prevents the button from shrinking in the callout. */
+}
+
+/* Adds a gold border to the final callout button on hover. */
+.button-light:hover {
+    border-color: var(--color-gold);
+    /* Highlights the button border with gold. */
+}
+
+/* -------------------- 5. FEATURE PANEL -------------------- */
+
+/* Styles the panel beside the welcome text. */
+.hero-panel {
+    padding: 32px;
+    /* Adds space inside the feature panel. */
+    border: 1px solid rgba(214, 173, 85, 0.3);
+    /* Adds a subtle gold-toned border. */
+    border-radius: 16px;
+    /* Gives the panel rounded corners. */
+    background: var(--color-white);
+    /* Gives the panel a white background. */
+    box-shadow: var(--shadow-soft);
+    /* Adds a soft shadow around the panel. */
+    position: relative;
+    /* Establishes a positioning context for future decorations. */
+    overflow: hidden;
+    /* Keeps panel content within its rounded corners. */
+}
+
+/* Arranges the symbol and heading at the top of the panel. */
+.panel-heading {
+    display: flex;
+    /* Places the symbol beside the heading text. */
+    align-items: center;
+    /* Vertically aligns the symbol and heading. */
+    gap: 16px;
+    /* Adds space between the symbol and the text. */
+}
+
+/* Styles the constitutional section symbol. */
+.panel-symbol {
+    width: 54px;
+    /* Sets the symbol container width. */
+    height: 54px;
+    /* Sets the symbol container height. */
+    display: flex;
+    /* Enables centring of the symbol. */
+    align-items: center;
+    /* Centres the symbol vertically. */
+    justify-content: center;
+    /* Centres the symbol horizontally. */
+    flex-shrink: 0;
+    /* Prevents the symbol container from shrinking. */
+    border-radius: 12px;
+    /* Rounds the symbol container's corners. */
+    background: #f8f1df;
+    /* Gives the symbol a pale gold background. */
+    color: var(--color-teal);
+    /* Colours the symbol teal. */
+    font-size: 32px;
+    /* Makes the symbol prominent. */
+    font-weight: 700;
+    /* Makes the symbol bold. */
+}
+
+/* Styles the feature panel heading. */
+.panel-heading h2 {
+    margin: 0 0 4px;
+    /* Removes the top margin and adds a small gap below. */
+    color: var(--color-teal);
+    /* Colours the heading teal. */
+    font-size: 20px;
+    /* Sets the heading size. */
+    line-height: 1.4;
+    /* Provides comfortable heading spacing. */
+}
+
+/* Styles the small text beneath the panel heading. */
+.panel-heading p {
+    margin: 0;
+    /* Removes default paragraph margins. */
+    color: var(--color-muted);
+    /* Uses a softer colour for supporting text. */
+    font-size: 13px;
+    /* Sets a compact supporting text size. */
+}
+
+/* Adds a divider between the heading and feature list. */
+.panel-divider {
+    height: 1px;
+    /* Makes the divider one pixel tall. */
+    margin: 25px 0;
+    /* Adds vertical space around the divider. */
+    background: var(--color-border);
+    /* Colours the divider light grey. */
+}
+
+/* Removes default list styling from the feature list. */
+.feature-list {
+    display: grid;
+    /* Stacks the feature list items consistently. */
+    gap: 16px;
+    /* Adds space between feature list items. */
+    margin: 0;
+    /* Removes the default outer list margin. */
+    padding: 0;
+    /* Removes the default list indentation. */
+    list-style: none;
+    /* Hides the default bullet points. */
+}
+
+/* Aligns each feature item and its check symbol. */
+.feature-list li {
+    display: flex;
+    /* Places the check symbol beside the feature text. */
+    align-items: flex-start;
+    /* Aligns the symbol with the top of the text. */
+    gap: 11px;
+    /* Adds space between the check symbol and the text. */
+    color: var(--color-text);
+    /* Uses the main text colour. */
+    font-size: 14px;
+    /* Sets the feature text size. */
+    font-weight: 600;
+    /* Gives feature text moderate emphasis. */
+}
+
+/* Styles the check symbols in the feature list. */
+.feature-check {
+    width: 22px;
+    /* Sets the check symbol width. */
+    height: 22px;
+    /* Sets the check symbol height. */
+    display: inline-flex;
+    /* Enables centring of the check symbol. */
+    align-items: center;
+    /* Centres the check symbol vertically. */
+    justify-content: center;
+    /* Centres the check symbol horizontally. */
+    flex-shrink: 0;
+    /* Prevents the check symbol from shrinking. */
+    border-radius: 50%;
+    /* Makes the check background circular. */
+    background: #e5f3eb;
+    /* Gives the check a pale green background. */
+    color: var(--color-green);
+    /* Colours the check green. */
+    font-size: 13px;
+    /* Sets the check symbol size. */
+    font-weight: 800;
+    /* Makes the check symbol bold. */
+}
+
+/* -------------------- 6. SECTION HEADINGS -------------------- */
+
+/* Provides consistent spacing for section heading groups. */
+.section-heading {
+    max-width: 700px;
+    /* Limits the width of section introductions. */
+    margin: 0 auto 30px;
+    /* Centres the heading group and adds space below it. */
+    text-align: center;
+    /* Centres the heading and supporting text. */
+}
+
+/* Styles headings within the search and topics sections. */
+.section-heading h2 {
+    margin: 0 0 10px;
+    /* Removes the top margin and adds space below the heading. */
+    color: var(--color-teal);
+    /* Uses teal for section headings. */
+    font-size: clamp(26px, 3vw, 36px);
+    /* Adjusts heading size for different screens. */
+    line-height: 1.3;
+    /* Keeps heading lines readable. */
+    letter-spacing: -0.6px;
+    /* Slightly tightens the heading letters. */
+}
+
+/* Styles the supporting text below section headings. */
+.section-heading > p:last-child {
+    margin: 0;
+    /* Removes unnecessary paragraph margins. */
+    color: var(--color-muted);
+    /* Uses muted text for the supporting description. */
+    font-size: 15px;
+    /* Sets the description size. */
+}
+
+/* -------------------- 7. SEARCH SECTION -------------------- */
+
+/* Creates the search section's background and spacing. */
+.search-section {
+    padding: 56px 24px 60px;
+    /* Adds space around the search section. */
+    background: var(--color-white);
+    /* Separates the search section from the grey page background. */
+    border-top: 1px solid var(--color-border);
+    /* Adds a subtle upper divider. */
+    border-bottom: 1px solid var(--color-border);
+    /* Adds a subtle lower divider. */
+}
+
+/* Styles the search form container. */
+.search-form {
+    width: min(700px, 100%);
+    /* Limits the search form width while allowing smaller screens. */
+    min-height: 64px;
+    /* Gives the search form a comfortable minimum height. */
+    display: flex;
+    /* Places the icon, input, and button in a row. */
+    align-items: center;
+    /* Vertically centres the form contents. */
+    gap: 12px;
+    /* Adds space between form elements. */
+    margin: 0 auto;
+    /* Centres the search form horizontally. */
+    padding: 8px 8px 8px 18px;
+    /* Adds space inside the form container. */
+    border: 1px solid #d6e0e4;
+    /* Adds a subtle border around the search form. */
+    border-radius: 10px;
+    /* Rounds the search form corners. */
+    background: var(--color-white);
+    /* Keeps the form background white. */
+    box-shadow: 0 5px 20px rgba(18, 59, 70, 0.05);
+    /* Adds a very subtle shadow beneath the form. */
+}
+
+/* Styles the search symbol. */
+.search-symbol {
+    color: var(--color-blue);
+    /* Colours the search symbol blue. */
+    font-size: 27px;
+    /* Makes the search symbol easy to recognise. */
+    line-height: 1;
+    /* Prevents excess vertical space around the symbol. */
+}
+
+/* Styles the search input field. */
+.search-form input {
+    width: 100%;
+    /* Allows the input to use the remaining form space. */
+    min-width: 0;
+    /* Allows the input to shrink on small screens. */
+    min-height: 44px;
+    /* Provides a comfortable input height. */
+    padding: 8px 4px;
+    /* Adds space inside the input field. */
+    border: none;
+    /* Removes the default input border. */
+    outline: none;
+    /* Removes the default outline because focus is styled below. */
+    background: transparent;
+    /* Keeps the input background transparent. */
+    color: var(--color-text);
+    /* Uses the main text colour for entered text. */
+    font-family: inherit;
+    /* Uses the website's main font. */
+    font-size: 14px;
+    /* Sets a readable input text size. */
+}
+
+/* Styles the placeholder text inside the search field. */
+.search-form input::placeholder {
+    color: #87969b;
+    /* Uses a muted colour for the placeholder. */
+    opacity: 1;
+    /* Keeps placeholder text visible in supported browsers. */
+}
+
+/* Highlights the search form when its input is selected. */
+.search-form:focus-within {
+    border-color: var(--color-blue);
+    /* Changes the form border to blue when focused. */
+    box-shadow: 0 0 0 3px rgba(23, 79, 104, 0.1);
+    /* Adds a visible focus indicator around the form. */
+}
+
+/* Removes the inner input outline when the form handles focus. */
+.search-form input:focus-visible {
+    outline: none;
+    /* Avoids showing a second outline inside the highlighted form. */
+}
+
+/* Styles the note below the search form. */
+.search-note {
+    margin: 13px auto 0;
+    /* Adds a small gap above the note and centres it. */
+    color: var(--color-muted);
+    /* Uses muted text for the note. */
+    font-size: 12px;
+    /* Keeps the note smaller than the main content. */
+    text-align: center;
+    /* Centres the note below the search form. */
+}
+
+/* -------------------- 8. TOPIC CARDS -------------------- */
+
+/* Styles the section containing the topic cards. */
+.topics-section {
+    width: min(1180px, calc(100% - 48px));
+    /* Limits the section width and keeps side margins. */
+    margin: 0 auto;
+    /* Centres the topic section horizontally. */
+    padding: 64px 0 72px;
+    /* Adds space above and below the topic cards. */
+}
+
+/* Arranges the topic cards in a responsive grid. */
+.topic-grid {
+    display: grid;
+    /* Creates a grid layout for the topic cards. */
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    /* Creates four equal-width columns on wide screens. */
+    gap: 20px;
+    /* Adds space between the cards. */
+}
+
+/* Styles each individual topic card. */
+.topic-card {
+    min-width: 0;
+    /* Allows the card to shrink within the grid. */
+    display: flex;
+    /* Enables vertical arrangement of card content. */
+    flex-direction: column;
+    /* Stacks the icon, heading, description, and link. */
+    align-items: flex-start;
+    /* Aligns the card contents to the left. */
+    padding: 25px 22px;
+    /* Adds space inside the card. */
+    border: 1px solid var(--color-border);
+    /* Adds a subtle border around the card. */
+    border-radius: 12px;
+    /* Rounds the card corners. */
+    background: var(--color-white);
+    /* Gives the card a white background. */
+    box-shadow: 0 4px 16px rgba(18, 59, 70, 0.035);
+    /* Adds a very subtle card shadow. */
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    /* Smooths the card's hover effects. */
+}
+
+/* Highlights topic cards when the pointer hovers over them. */
+.topic-card:hover {
+    transform: translateY(-4px);
+    /* Raises the card slightly on hover. */
+    border-color: rgba(214, 173, 85, 0.8);
+    /* Highlights the card border with gold. */
+    box-shadow: var(--shadow-soft);
+    /* Makes the card shadow more visible. */
+}
+
+/* Styles the numbered marker on each topic card. */
+.topic-icon {
+    width: 44px;
+    /* Sets the marker width. */
+    height: 44px;
+    /* Sets the marker height. */
+    display: flex;
+    /* Enables centring of the marker text. */
+    align-items: center;
+    /* Centres the marker text vertically. */
+    justify-content: center;
+    /* Centres the marker text horizontally. */
+    margin-bottom: 18px;
+    /* Adds space between the marker and heading. */
+    border-radius: 10px;
+    /* Softens the marker corners. */
+    background: #eaf1f4;
+    /* Gives the marker a pale blue-grey background. */
+    color: var(--color-blue);
+    /* Colours the marker text blue. */
+    font-size: 13px;
+    /* Sets the marker text size. */
+    font-weight: 800;
+    /* Makes the marker text bold. */
+}
+
+/* Styles the topic card heading. */
+.topic-card h3 {
+    margin: 0 0 10px;
+    /* Removes the top margin and adds space below the heading. */
+    color: var(--color-teal);
+    /* Colours the card heading teal. */
+    font-size: 18px;
+    /* Sets the heading size. */
+    line-height: 1.4;
+    /* Provides readable heading spacing. */
+}
+
+/* Styles the topic card description. */
+.topic-card p {
+    flex-grow: 1;
+    /* Allows descriptions to occupy available vertical space. */
+    margin: 0 0 22px;
+    /* Adds space below the description. */
+    color: var(--color-muted);
+    /* Uses muted text for the description. */
+    font-size: 13px;
+    /* Sets a compact but readable description size. */
+    line-height: 1.8;
+    /* Adds comfortable line spacing. */
+}
+
+/* Styles the link at the bottom of each topic card. */
+.topic-card a {
+    color: var(--color-green);
+    /* Uses green to highlight the card link. */
+    font-size: 13px;
+    /* Sets the link text size. */
+    font-weight: 800;
+    /* Makes the link stand out. */
+}
+
+/* Highlights the topic card link when hovered over. */
+.topic-card a:hover {
+    color: var(--color-blue);
+    /* Changes the link colour to blue on hover. */
+}
+
+/* -------------------- 9. FINAL DOCUMENT CALLOUT -------------------- */
+
+/* Styles the final invitation to read the constitution. */
+.document-callout {
+    width: min(1180px, calc(100% - 48px));
+    /* Limits the callout width and maintains side margins. */
+    display: flex;
+    /* Places the callout text and button in a row. */
+    align-items: center;
+    /* Vertically centres the callout contents. */
+    justify-content: space-between;
+    /* Separates the text from the button. */
+    gap: 24px;
+    /* Adds space between the text and button. */
+    margin: 0 auto 70px;
+    /* Centres the callout and adds space below it. */
+    padding: 34px 38px;
+    /* Adds comfortable space inside the callout. */
+    border-radius: 14px;
+    /* Rounds the callout corners. */
+    background: var(--color-teal);
+    /* Gives the callout a deep teal background. */
+    color: var(--color-white);
+    /* Makes the callout text white by default. */
+    box-shadow: var(--shadow-soft);
+    /* Adds a soft shadow around the callout. */
+}
+
+/* Styles the final callout heading. */
+.document-callout h2 {
+    margin: 0 0 6px;
+    /* Removes the top margin and adds a small gap below. */
+    color: var(--color-gold);
+    /* Highlights the callout heading in gold. */
+    font-size: 23px;
+    /* Sets the heading size. */
+    line-height: 1.4;
+    /* Keeps the heading easy to read. */
+}
+
+/* Styles the final callout description. */
+.document-callout p {
+    margin: 0;
+    /* Removes default paragraph margins. */
+    color: #e1e9eb;
+    /* Uses a soft white-grey colour for the description. */
+    font-size: 14px;
+    /* Sets the description text size. */
+}
+
+/* -------------------- 10. WEBSITE FOOTER -------------------- */
+
+/* Styles the footer at the bottom of the page. */
+.site-footer {
+    background: #0c2d35;
+    /* Uses a darker teal to distinguish the footer. */
+    color: var(--color-white);
+    /* Makes footer text white by default. */
+    border-top: 3px solid var(--color-gold);
+    /* Adds a gold line above the footer. */
+}
+
+/* Aligns the footer information. */
+.footer-inner {
+    width: min(1180px, calc(100% - 48px));
+    /* Limits the footer content width. */
+    min-height: 94px;
+    /* Gives the footer comfortable vertical space. */
+    display: flex;
+    /* Places footer information in a row. */
+    align-items: center;
+    /* Vertically centres the footer text. */
+    justify-content: space-between;
+    /* Separates the two footer paragraphs. */
+    flex-wrap: wrap;
+    /* Allows footer text to wrap when space is limited. */
+    gap: 10px 24px;
+    /* Adds vertical and horizontal spacing between items. */
+    margin: 0 auto;
+    /* Centres the footer content horizontally. */
+    padding: 18px 0;
+    /* Adds vertical space inside the footer. */
+}
+
+/* Styles the footer paragraphs. */
+.footer-inner p {
+    margin: 0;
+    /* Removes default paragraph margins. */
+    color: #d4dfe2;
+    /* Gives footer text a softer white colour. */
+    font-size: 12px;
+    /* Keeps footer text discreet. */
+}
+
+/* Makes the group identification slightly more prominent. */
+.footer-inner p:first-child {
+    color: var(--color-gold);
+    /* Uses gold for the first footer paragraph. */
+    font-weight: 700;
+    /* Makes the group identification bold. */
+    letter-spacing: 0.4px;
+    /* Adds slight letter spacing. */
+}
+
+/* -------------------- 11. ACCESSIBILITY HELPER -------------------- */
+
+/* Hides a label visually while keeping it available to assistive technology. */
+.visually-hidden {
+    position: absolute;
+    /* Removes the label from the normal document flow. */
+    width: 1px;
+    /* Makes the label extremely narrow. */
+    height: 1px;
+    /* Makes the label extremely short. */
+    padding: 0;
+    /* Removes internal spacing. */
+    margin: -1px;
+    /* Moves the label outside its normal visible area. */
+    overflow: hidden;
+    /* Hides any content extending beyond its tiny dimensions. */
+    clip: rect(0, 0, 0, 0);
+    /* Clips the label so it is not visually displayed. */
+    white-space: nowrap;
+    /* Prevents the label text from wrapping. */
+    border: 0;
+    /* Removes any visible border. */
+}
+
+/* -------------------- 12. TABLET RESPONSIVENESS -------------------- */
+
+/* Adjusts the layout for tablets and smaller laptop screens. */
+@media (max-width: 1000px) {
+
+    /* Allows the header to wrap if its contents need more space. */
+    .header-inner {
+        flex-wrap: wrap;
+        /* Allows the identity and navigation to occupy separate rows. */
+        padding-top: 18px;
+        /* Adds space above the header contents. */
+        padding-bottom: 18px;
+        /* Adds space below the header contents. */
+    }
+
+    /* Keeps navigation neatly aligned when the header wraps. */
+    .main-nav {
+        justify-content: flex-start;
+        /* Aligns navigation links towards the left. */
+    }
+
+    /* Reduces the gap between the welcome section columns. */
+    .hero {
+        gap: 32px;
+        /* Reduces horizontal space to fit smaller screens. */
+        grid-template-columns: minmax(0, 1.15fr) minmax(270px, 0.85fr);
+        /* Adjusts the balance between the text and feature panel. */
+    }
+
+    /* Reduces the panel's internal spacing. */
+    .hero-panel {
+        padding: 25px;
+        /* Preserves a comfortable panel while saving space. */
+    }
+
+    /* Reduces the number of topic cards per row. */
+    .topic-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        /* Displays two cards per row on medium screens. */
+    }
+}
+
+/* -------------------- 13. MOBILE RESPONSIVENESS -------------------- */
+
+/* Adjusts the design for phones and other narrow screens. */
+@media (max-width: 680px) {
+
+    /* Reduces the horizontal margins in the header. */
+    .header-inner {
+        width: calc(100% - 32px);
+        /* Leaves a 16-pixel margin on each side. */
+        align-items: flex-start;
+        /* Aligns header content towards the top of its row. */
+        gap: 18px;
+        /* Adds space between the identity and navigation. */
+    }
+
+    /* Slightly reduces the emblem size on mobile screens. */
+    .brand-mark {
+        width: 46px;
+        /* Makes the emblem narrower. */
+        height: 46px;
+        /* Makes the emblem shorter. */
+        font-size: 13px;
+        /* Reduces the emblem text size. */
+    }
+
+    /* Reduces the group name size on mobile screens. */
+    .brand-name {
+        font-size: 12px;
+        /* Keeps the first line from becoming too wide. */
+        letter-spacing: 0.4px;
+        /* Reduces letter spacing to save horizontal space. */
+    }
+
+    /* Reduces the second group name line size on mobile. */
+    .brand-subtitle {
+        font-size: 10px;
+        /* Keeps the second line compact. */
+        letter-spacing: 1px;
+        /* Reduces letter spacing to fit narrow screens. */
+    }
+
+    /* Arranges the navigation links across the available width. */
+    .main-nav {
+        width: 100%;
+        /* Allows navigation to use the full header width. */
+        justify-content: flex-start;
+        /* Aligns the links to the left. */
+        gap: 5px;
+        /* Reduces the gaps between navigation links. */
+    }
+
+    /* Reduces the padding and text size of navigation links. */
+    .nav-link {
+        padding: 9px 10px;
+        /* Keeps navigation links comfortable to tap. */
+        font-size: 12px;
+        /* Reduces navigation text size for mobile screens. */
+    }
+
+    /* Reduces the welcome section's margins on phones. */
+    .hero {
+        width: calc(100% - 32px);
+        /* Leaves a 16-pixel margin on each side. */
+        margin-top: 36px;
+        /* Reduces the space above the welcome section. */
+        margin-bottom: 42px;
+        /* Reduces the space below the welcome section. */
+        grid-template-columns: minmax(0, 1fr);
+        /* Stacks the welcome text and feature panel vertically. */
+        gap: 30px;
+        /* Adds space between the stacked elements. */
+    }
+
+    /* Makes the main welcome heading easier to read on phones. */
+    .hero h1 {
+        font-size: clamp(32px, 8vw, 43px);
+        /* Adapts the heading to the phone's screen width. */
+        letter-spacing: -0.8px;
+        /* Reduces tight letter spacing on small screens. */
+    }
+
+    /* Slightly reduces the welcome description size on phones. */
+    .hero-description {
+        font-size: 15px;
+        /* Keeps the description readable without crowding. */
+    }
+
+    /* Makes the welcome buttons fit smaller screens. */
+    .hero-actions {
+        align-items: stretch;
+        /* Allows buttons to stretch consistently when wrapped. */
+        gap: 10px;
+        /* Reduces the gap between buttons. */
+    }
+
+    /* Keeps the feature panel comfortable on narrow screens. */
+    .hero-panel {
+        padding: 24px 21px;
+        /* Adjusts panel padding for mobile screens. */
+    }
+
+    /* Reduces search section padding on phones. */
+    .search-section {
+        padding: 42px 16px 45px;
+        /* Saves space while preserving separation between elements. */
+    }
+
+    /* Makes the search form fit narrow screens. */
+    .search-form {
+        gap: 8px;
+        /* Reduces space between the icon, input, and button. */
+        padding-left: 12px;
+        /* Reduces the left padding inside the form. */
+    }
+
+    /* Reduces the search button padding on phones. */
+    .button-search {
+        padding: 10px 13px;
+        /* Keeps the search button compact but usable. */
+        font-size: 13px;
+        /* Slightly reduces the button text size. */
+    }
+
+    /* Reduces the topic section width and vertical spacing. */
+    .topics-section {
+        width: calc(100% - 32px);
+        /* Leaves a 16-pixel margin on each side. */
+        padding-top: 44px;
+        /* Reduces the space above the topic section. */
+        padding-bottom: 48px;
+        /* Reduces the space below the topic section. */
+    }
+
+    /* Reduces the space below section headings on phones. */
+    .section-heading {
+        margin-bottom: 24px;
+        /* Keeps the topic cards close to their heading. */
+    }
+
+    /* Makes the topic card grid a single column on narrow phones. */
+    .topic-grid {
+        grid-template-columns: minmax(0, 1fr);
+        /* Displays one topic card per row. */
+        gap: 14px;
+        /* Adds space between stacked cards. */
+    }
+
+    /* Gives topic cards slightly less padding on mobile screens. */
+    .topic-card {
+        padding: 22px;
+        /* Keeps the card content comfortably spaced. */
+    }
+
+    /* Reduces the space below each topic description. */
+    .topic-card p {
+        margin-bottom: 16px;
+        /* Brings the card link closer to its description. */
+    }
+
+    /* Stacks the final callout text and button on phones. */
+    .document-callout {
+        width: calc(100% - 32px);
+        /* Leaves a 16-pixel margin on each side. */
+        flex-direction: column;
+        /* Places the callout text above the button. */
+        align-items: flex-start;
+        /* Aligns the text and button to the left. */
+        gap: 20px;
+        /* Adds space between the text and button. */
+        margin-bottom: 44px;
+        /* Reduces the space below the callout. */
+        padding: 27px 23px;
+        /* Reduces the internal callout spacing. */
+    }
+
+    /* Reduces the final callout heading size on phones. */
+    .document-callout h2 {
+        font-size: 21px;
+        /* Keeps the heading balanced on a narrow screen. */
+    }
+
+    /* Allows the footer content to stack on phones. */
+    .footer-inner {
+        width: calc(100% - 32px);
+        /* Leaves a 16-pixel margin on each side. */
+        flex-direction: column;
+        /* Places the footer paragraphs on separate lines. */
+        align-items: flex-start;
+        /* Aligns the footer text to the left. */
+        justify-content: center;
+        /* Vertically centres the content within the footer. */
+        gap: 7px;
+        /* Adds a small gap between the footer paragraphs. */
+        padding: 22px 0;
+        /* Adds vertical space around the footer text. */
+    }
+}
+
+/* -------------------- 14. VERY SMALL PHONE SCREENS -------------------- */
+
+/* Makes small elements fit on especially narrow screens. */
+@media (max-width: 380px) {
+
+    /* Reduces the horizontal header margins further. */
+    .header-inner {
+        width: calc(100% - 24px);
+        /* Leaves a 12-pixel margin on each side. */
+    }
+
+    /* Reduces navigation padding on very narrow screens. */
+    .nav-link {
+        padding: 8px;
+        /* Saves horizontal space between navigation links. */
+        font-size: 11px;
+        /* Keeps the navigation text compact. */
+    }
+
+    /* Reduces the search form's left padding. */
+    .search-form {
+        padding-left: 8px;
+        /* Creates additional space for the input on small phones. */
+    }
+
+    /* Reduces the search button padding on tiny screens. */
+    .button-search {
+        padding: 9px;
+        /* Keeps the button within the available form width. */
+    }
+
+    /* Allows welcome buttons to occupy the full available width. */
+    .hero-actions .button {
+        width: 100%;
+        /* Stacks the buttons neatly when space is limited. */
+    }
+}
+
+/* -------------------- 15. REDUCED MOTION ACCESSIBILITY -------------------- */
+
+/* Respects visitors who prefer fewer animations. */
+@media (prefers-reduced-motion: reduce) {
+
+    /* Disables smooth scrolling for visitors who request reduced motion. */
+    html {
+        scroll-behavior: auto;
+        /* Uses immediate scrolling instead of animated scrolling. */
+    }
+
+    /* Removes animated transitions from interactive elements. */
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        /* Makes transitions effectively instantaneous. */
+        animation-duration: 0.01ms !important;
+        /* Makes animations effectively instantaneous. */
+        animation-iteration-count: 1 !important;
+        /* Prevents animations from repeating. */
+    }
+}
+
+/* -------------------- END OF STYLESHEET -------------------- */
+/* Apply consistent sizing to all elements. */
+* {
+    box-sizing: border-box;
+}
+
+/* Keep the page layout and existing colours intact where possible. */
+body {
+    margin: 0;
+}
+
+/* Keep the navigation bar visible while scrolling. */
+.site-header {
+    position: sticky !important;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Reduce the height of the header. */
+.header-inner {
+    min-height: 60px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+
+/* Make the logo area smaller. */
+.brand-mark {
+    width: 40px !important;
+    height: 40px !important;
+}
+
+/* Reduce the space around navigation links. */
+.nav-link {
+    padding: 6px 9px !important;
+}
+
+/* Reduce the height of the footer. */
+.footer-inner {
+    min-height: 50px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+}
+
+/* Keep the header and footer compact on mobile phones. */
+@media (max-width: 768px) {
+    .header-inner {
+        min-height: 55px !important;
+        padding-top: 4px !important;
+        padding-bottom: 4px !important;
+    }
+
+    .nav-link {
+        padding: 5px 7px !important;
+    }
+
+    .footer-inner {
+        min-height: 45px !important;
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+    }
+}
+/* Keep the header consistent and fixed at the top on every page. */
+.site-header {
+    position: sticky !important;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+/* Reduce header height on every page. */
+.header-inner {
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 6px 0 !important;
+}
+
+/* Make the logo smaller. */
+.brand-mark {
+    width: 38px !important;
+    height: 38px !important;
+}
+
+/* Reduce navigation link spacing consistently. */
+.nav-link {
+    padding: 5px 9px !important;
+    margin: 0 !important;
+}
+
+/* Keep footer appearance consistent on every page. */
+.site-footer {
+    width: 100%;
+    margin: 0 !important;
+}
+
+/* Reduce footer height by removing excess spacing. */
+.footer-inner {
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 5px 0 !important;
+    gap: 4px !important;
+}
+
+/* Reduce footer text size and spacing. */
+.footer-inner p {
+    margin: 2px 0 !important;
+    font-size: 12px !important;
+    line-height: 1.3 !important;
+}
+
+/* Keep both pages compact on mobile screens. */
+@media (max-width: 768px) {
+    .header-inner {
+        padding: 4px 0 !important;
+    }
+
+    .brand-mark {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    .nav-link {
+        padding: 4px 6px !important;
+        font-size: 13px !important;
+    }
+
+    .footer-inner {
+        padding: 4px 0 !important;
+    }
+
+    .footer-inner p {
+        font-size: 11px !important;
+    }
+}
